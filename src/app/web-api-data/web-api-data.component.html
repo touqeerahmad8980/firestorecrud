@@ -1,0 +1,24 @@
+<!-- <h2>Dogs Breeds</h2>
+
+<select (change)="onChange($event.target.value)" class="form-control">
+    <option value='affenpinscher'>Affenpinscher</option>
+    <option value='akita'>Akita</option>
+    <option value='beagle'>Beagle</option>
+</select>
+
+<ul>
+  <li *ngFor="let hero of (heroes|async)?.message | slice:0:10;">
+    <img src="{{hero}}" alt="">
+  </li>
+</ul> -->
+
+<ul>
+  <li class="polaroid" *ngFor="let post of (posts|async)  | paginate: { itemsPerPage: 20, currentPage: p }">
+    <img src="{{post.url}}" alt="Norway">
+    <div class="title_wrap">
+      <p class="desc">{{post.title}}</p>
+    </div>
+  </li>
+</ul>
+<pagination-controls (pageChange)="p = $event" class="breadcrumb"></pagination-controls>
+<!-- {{(posts|async) | json}} -->
