@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 // import { post} from './post';
-import { Observable } from 'rxjs';
+// import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-web-api-data',
@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 export class WebApiDataComponent implements OnInit {
  // variables
  posts;
+ page_number;
 //  _url: string = `https://dog.ceo/api/breed/affenpinscher/images`;
  _url: string =  `http://jsonplaceholder.typicode.com/photos`;
 //  name;

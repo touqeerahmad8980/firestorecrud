@@ -13,12 +13,12 @@
 </ul> -->
 
 <ul>
-  <li class="polaroid" *ngFor="let post of (posts|async)  | paginate: { itemsPerPage: 20, currentPage: p }">
+  <li class="polaroid" *ngFor="let post of (posts|async)  | paginate: { itemsPerPage: 20, currentPage: page_number }">
     <img src="{{post.url}}" alt="Norway">
     <div class="title_wrap">
       <p class="desc">{{post.title}}</p>
     </div>
   </li>
 </ul>
-<pagination-controls (pageChange)="p = $event" class="breadcrumb"></pagination-controls>
+<pagination-controls (pageChange)="page_number = $event" class="breadcrumb"></pagination-controls>
 <!-- {{(posts|async) | json}} -->

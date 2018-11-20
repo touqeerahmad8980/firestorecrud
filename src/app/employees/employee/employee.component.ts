@@ -10,10 +10,10 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
-
-  constructor(private service: EmployeeService,
-  private firestore: AngularFirestore,
-  private toastr: ToastrService) { }
+  service: EmployeeService
+  firestore: AngularFirestore
+  toastr: ToastrService
+  constructor() { }
 
   ngOnInit() {
     this.resetForm();
